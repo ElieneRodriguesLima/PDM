@@ -1,0 +1,41 @@
+import 'dart:io';
+
+class Veiculo {
+  int velocidade;
+  String cor;
+  double peso;
+  Veiculo(this.velocidade, this.cor, this.peso);
+}
+
+class Carro extends Veiculo {
+  Carro(int velocidade, String nome, double peso)
+      : super(velocidade, nome, peso);
+}
+
+class Aviao extends Veiculo {
+  int numero_de_helices;
+  Aviao(int velocidade, String nome, double peso, this.numero_de_helices)
+      : super(velocidade, nome, peso);
+}
+
+void main() {
+  Carro carro = Carro(80, 'Azul', 190);
+  stderr.write('A velocidade do carro é ');
+  print(carro.velocidade);
+  stderr.write('A cor do carro é ');
+  print(carro.cor);
+  stderr.write('O peso do carro é ');
+  print(carro.peso);
+
+  Aviao aviao = Aviao(150, 'Roxo', 350, 3);
+  stderr.write('A velocidade do avião é ');
+  print(aviao.velocidade);
+  stderr.write('A cor do avião é ');
+  print(aviao.cor);
+  stderr.write('O peso do avião é ');
+  print(aviao.peso);
+  stderr.write('A quantidade de hélices do avião são ');
+  print(aviao.numero_de_helices);
+
+
+}
